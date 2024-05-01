@@ -54,6 +54,7 @@ h1 {
 
 .weather-container {
   margin-block: 4rem;
+  width: 100%;
 }
 
 .btn {
@@ -201,7 +202,6 @@ h1 {
 }
 .form-container input{
   all: unset;
-  width: full;
   width: calc(100% - 80px);
   height: 40px;
   padding: 0 20px;

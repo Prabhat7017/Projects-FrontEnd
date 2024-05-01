@@ -7,13 +7,14 @@ const searchForm = document.querySelector("[data-searchForm]");
 const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
 const errorContainer= document.querySelector(".error-container");
-
+const homepage= document.querySelector(".homepage");
 let currTab = userTab;
 const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";
 currTab.classList.add("current-tab");
 getfromSessionStorage();
 
 userTab.addEventListener("click", () => {
+    errorContainer.classList.remove("active");
     switchTab(userTab);
 });
 
@@ -42,7 +43,7 @@ function switchTab(newTab) {
 
 //check is cordinates already present in sessioon storage
 function getfromSessionStorage() {
-    const localCoordinates = sessionStorage.getItem("user-cordinates");
+    const localCoordinates = sessionStorage.getItem("user-coordinates");
     if (!localCoordinates) {
         grantAccessContainer.classList.add("active");
     } else {
@@ -146,3 +147,7 @@ async function fetchSearchWeatherInfo(city) {
         errorContainer.classList.add("active");
     }
 }
+
+homepage.addEventListener("click", ()=>{
+    switchTab(userTab);
+})
