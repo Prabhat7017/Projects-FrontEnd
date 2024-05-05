@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="wrapper">
@@ -26,32 +27,33 @@
         </div>
         <div>
           <button class="btn">
-            <p>DARK</p>
-            <img src="assets/images/moon-icon.svg" />
+            <p id="mode-text">DARK</p>
+            <img src="assets/images/moon-icon.svg" id="modeicon"/>
           </button>
         </div>
       </div>
 
       <div class="search-container">
+        <p class="error">no search results found</p>
         <img src="assets/images/search-icon.svg" />
-        <input type="text" placeholder="Enter a GitHub username..." />
+        <input type="text" placeholder="Enter a GitHub username..." class="input"/>
+        <i class="fa-solid fa-xmark cross"></i>
         <button type="submit" class="search-btn">Search</button>
       </div>
 
       <div class="container">
         <div class="container-main">
-          <img src="assets/android-chrome-192x192.png" width="120px" />
+          <img width="120px" class="user-img"/>
           <div class="user-info">
-            <h1>Pranay Gupta</h1>
-            <a href="#">@thepranaygupta</a>
-            <p>Joined 05 May 2020</p>
+            <h1 class="name"></h1>
+            <a href="#" class="username" target="_blank"></a>
+            <p class="createdAt"></p>
           </div>
         </div>
 
         <div class="list">
-          <p>
-            Tech Intern @Keysight • internet craftsman 🛠️ • building
-            @propeers-in • tech @codehelp
+          <p class="bio">
+            
           </p>
         </div>
 
@@ -59,18 +61,18 @@
           <div>
             <p class="repos">
               Repos <br />
-              <span class="number">71</span>
+              <span class="number" id="repo"></span>
             </p>
           </div>
           <div>
             <p class="followers">
               Followers <br />
-              <span class="number">778</span>
+              <span class="number" id="follower"></span>
             </p>
           </div>
           <div>
             <p class="following">
-              Following <br /><span class="number">160</span>
+              Following <br /><span class="number" id="following"></span>
             </p>
           </div>
         </div>
@@ -79,22 +81,22 @@
           <div class="first">
             <div class="icon">
               <img src="assets/images/location-icon.svg" />
-              <p class="location">Gurugram, India</p>
+              <p class="location"></p>
             </div>
 
             <div class="icon">
               <img src="assets/images/twitter-icon.svg" />
-              <a href="#">thepranaygupta</a>
+              <a href="#" class="twitter"></a>
             </div>
           </div>
           <div class="second">
             <div class="icon">
               <img src="assets/images/website-icon.svg" />
-              <a href="#" class="link">thepranaygupta.bio.link</a>
+              <a href="#" class="blog"></a>
             </div>
             <div class="icon">
               <img src="assets/images/company-icon.svg" />
-              <p>@Keysight</p>
+              <p class="company"></p>
             </div>
           </div>
         </div>

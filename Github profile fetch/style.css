@@ -83,7 +83,7 @@
     background-color: var(--btn);
     width: 20%;
     height: 80%;
-    color: var(--lm-bg-content);
+    color: white;
     border-radius: 0.7rem;
     border: none;
     right: 0.7rem;
@@ -101,6 +101,7 @@
 
   .search-container input::placeholder{
     font-size: 1.1rem;
+    color: var(--lm-text);
   }
 
   .container{
@@ -139,6 +140,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
+    color: var(--lm-text-alt);
   }
 
   .user-info a{
@@ -185,7 +187,7 @@
 .number{
     font-weight:bold;
     font-size: 1.4rem;
-    color: black;
+    color: var(--lm-text-alt);
 }
 
 .links{
@@ -217,4 +219,36 @@
 
 .icon a{
     color: var(--lm-text);
+}
+
+.cross{
+  position: absolute;
+  right: 25%;
+  top: 40%;
+  cursor: pointer;
+  z-index: -1;
+}
+
+.cross.active{ 
+  color: var(--lm-text-alt);
+  z-index: 1;
+}
+.input:focus{
+  outline: none;
+}
+
+.error{
+  color: red;
+  position: absolute;
+  right: 5%;
+  top: -40%;
+  display: none;
+}
+
+.error.active{
+  display: block;
+}
+
+.input{
+  color: var(--lm-text-alt);
 }
