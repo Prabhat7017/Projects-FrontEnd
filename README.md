@@ -1,2 +1,2 @@
-Practice based projects ! Happy Learning.❤️
+Practice based projects ! Happy Learning. 💯
 
