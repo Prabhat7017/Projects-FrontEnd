@@ -143,6 +143,11 @@ a {
   position: relative;
   z-index: 1;
 }
+
+.btn-pink a {
+  text-decoration: none; /* Ensure no underline on hover */
+  color: inherit; /* Inherit color from the parent */
+}
 .btn-pink::before {
   content: "";
   position: absolute;
@@ -156,6 +161,7 @@ a {
   transform-origin: left;
   transition: all 0.8s;
 }
+
 .btn-pink:hover::before {
   transform: scaleX(1);
 }
@@ -414,6 +420,10 @@ a {
   align-items: center;
 }
 
+.btn-project{
+  letter-spacing: 5px;
+  font-weight: bold;
+}
 .btn-project:hover{
   border: none;
 }
@@ -695,4 +705,30 @@ footer{
 .icon-wrapper{
   display: flex;
   gap: 1rem;
+}
+
+.icon-link {
+  position: relative;
+}
+
+.icon-link::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 150%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.icon-link:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
